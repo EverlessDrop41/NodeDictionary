@@ -63,6 +63,7 @@
 #*.RTF   diff=astextplain
 
 ###############################################################################
-# Swig templating language
+# Templating language
 ###############################################################################
 *.swig linguist-language=html
+*.nunjucks linguist-language=html
