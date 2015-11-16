@@ -2,10 +2,20 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{% block title %}Dictionary{% endblock %}</title>
+		{# Pure.css - CSS Framework #}
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 		{% block head %} {% endblock %}
 	</head>
 	<body>
+		<div class="pure-menu pure-menu-horizontal">
+	    <a href="/" class="pure-menu-heading pure-menu-link">Dictionary</a>
+	    <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+        <li class="pure-menu-item"><a href="/api" class="pure-menu-link">API</a></li>
+	    </ul>
+		</div>
 		{% block content %}{% endblock %}
 	</body>
 </html>
