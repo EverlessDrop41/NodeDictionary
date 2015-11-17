@@ -35,6 +35,7 @@ app.use(function (request, res, next) {
 
 require('./routes/index.js')(app);
 require('./routes/api.js')(app);
+require('./routes/definition.js')(app);
 
 var server = app.listen(process.env.PORT || 3000, function () {
   var host = server.address().address;

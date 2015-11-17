@@ -1,0 +1,7 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<div class="row">
+	{{ message }}
+</div>
+{% endblock %}

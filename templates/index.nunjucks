@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row">
-	<form action="/search" method="POST">
+	<form action="/define" method="GET">
 		<div class="nine columns">
 			<input id="word" name="word" type="text" class="u-full-width">
 		</div>
