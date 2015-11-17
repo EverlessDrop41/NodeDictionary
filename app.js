@@ -13,6 +13,7 @@ app.use(body_parser.urlencoded({
 //Configure nunjucks
 nunjucks.configure('templates', {
     autoescape: true,
+    noCache: true,
     express: app
 });
 

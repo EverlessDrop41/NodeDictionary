@@ -1,5 +1,17 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<h1>Hello, World!</h1>
+<div class="row">
+	<form action="/search" method="POST">
+		<div class="nine columns">
+			<input id="search" type="text" class="u-full-width">
+		</div>
+		<div class="three columns">
+			<input class="button-primary u-full-width" type="submit" value="Define">
+		</div>
+	</form>
+</div>
+<div class="row">
+	<p>This free online english dictionary powered by the <a href="https://www.wordsapi.com/">Words API</a></p>
+</div>
 {% endblock %}
