@@ -21,3 +21,8 @@
 	font-size: 2rem;
 	margin: 2rem;
 }
+
+.nav-items {
+	float: right;
+	margin-right: 2rem;
+}
