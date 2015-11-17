@@ -18,7 +18,7 @@ module.exports = function (app) {
 			  		body = JSON.parse(body);
 				  	res.render("definition.nunjucks", {word: word, definitions: body.results});
 			  	} catch (e) {
-			  		res.render("message.nunjucks",{message: "That word couldn't be found"});
+			  		res.render("definition.nunjucks", {word: word, definitions: []});
 			  	}
 			  });
 			}).on('error', function(e) {

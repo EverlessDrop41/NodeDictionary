@@ -1,0 +1,16 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<div class="row">
+	<h1 class="word">{{ word | capitalize}}</h1>
+	{% for def in definitions %}
+	<div class="definition-container">
+		<em class="part_of_speech">{{ def.partOfSpeech }}</em>
+		<p class="definition">{{ def.definition }}</p>
+	</div>
+	{% endfor %}
+	{% if not definitions.length %}
+		<p>Sorry, we couldn't find the word "{{ word }}"</p>
+	{% endif %}
+</div>
+{% endblock %}

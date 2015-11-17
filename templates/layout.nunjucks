@@ -32,6 +32,16 @@
 			</div>
 		</nav>
 		<div class="container">
+			<div class="row">
+				<form action="/define" method="GET">
+					<div class="nine columns">
+						<input id="word" name="word" type="text" class="u-full-width">
+					</div>
+					<div class="three columns">
+						<input class="button-primary u-full-width" type="submit" value="Define">
+					</div>
+				</form>
+			</div>
 			{% block content %}{% endblock %}
 		</div>
 	</body>
