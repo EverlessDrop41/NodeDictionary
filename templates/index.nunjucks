@@ -4,7 +4,7 @@
 <div class="row">
 	<form action="/search" method="POST">
 		<div class="nine columns">
-			<input id="search" type="text" class="u-full-width">
+			<input id="word" name="word" type="text" class="u-full-width">
 		</div>
 		<div class="three columns">
 			<input class="button-primary u-full-width" type="submit" value="Define">
