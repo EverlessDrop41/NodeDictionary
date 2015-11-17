@@ -14,15 +14,19 @@ module.exports = function (app) {
 			  });
 			  response.on('end', function() {
 			  	console.log("Got response: " + response.statusCode);
-				  res.setHeader('Content-Type', 'application/json');
-				  res.send(body);
+			  	try {
+			  		body = JSON.parse(body);
+				  	res.render("definition.nunjucks", {word: word, definitions: body.results});
+			  	} catch (e) {
+			  		res.render("message.nunjucks",{message: "That word couldn't be found"});
+			  	}
 			  });
 			}).on('error', function(e) {
 			  console.log("Got error: " + e.message);
-			  res.json(e);
+			  res.render("message.nunjucks",{message: e.message});
 			});
 		} else {
-			res.render("error.nunjucks",{message: "Word not specified"});
+			res.render("message.nunjucks",{message: "Word not specified"});
 		}
 	});
 };
