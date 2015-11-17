@@ -13,6 +13,7 @@
   	{# CSS #}
   	<link rel="stylesheet" href="/css/normalize.css">
   	<link rel="stylesheet" href="/css/skeleton.css">
+  	<link rel="stylesheet" href="/css/navbar.css">
 
 		{# Favicon #}
   	<link rel="icon" type="image/png" href="images/favicon.png">
@@ -20,6 +21,12 @@
 		{% block head %} {% endblock %}
 	</head>
 	<body>
+		<nav class="navbar">
+			<a href="/" class="nav-header">Dictionary</a>
+			<a href="/" class="nav-item" >Home</a>
+			<a href="/about" class="nav-item" >About</a>
+			<a href="/api" class="nav-item" >API</a>
+		</nav>
 		{% block content %}{% endblock %}
 	</body>
 </html>
