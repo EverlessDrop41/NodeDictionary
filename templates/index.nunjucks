@@ -4,4 +4,18 @@
 <div class="row">
 	<p>This free online english dictionary powered by the <a href="https://www.wordsapi.com/">Words API</a></p>
 </div>
+
+<div class="row">
+	<h1>Random Word</h1>
+	<h2 class="word">{{ word | capitalize}}</h2>
+	{% for def in definitions %}
+	<div class="definition-container">
+		<em class="part_of_speech">{{ def.partOfSpeech }}</em>
+		<p class="definition">{{ def.definition }}</p>
+	</div>
+	{% endfor %}
+	{% if not definitions.length %}
+		<p>Sorry, we couldn't find a definition for the word "{{ word }}"</p>
+	{% endif %}
+</div>
 {% endblock %}
